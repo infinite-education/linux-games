@@ -487,7 +487,7 @@ function start_vm(user, pwd)
     function loadScript(src, f) {
         var head = document.getElementsByTagName("head")[0];
         var script = document.createElement("script");
-        script.src = 'https://raw.githubusercontent.com/infinite-education/linux-games/main/src/' + src;
+        script.src = 'https://infinite.education/github-proxy/' + src;
         var done = false;
         script.onload = script.onreadystatechange = function() { 
             // attach to both events for cross browser finish detection:
