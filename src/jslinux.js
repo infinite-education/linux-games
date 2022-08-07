@@ -68,7 +68,10 @@ function term_handler(str)
 function downloading_timer_cb()
 {
     var el = document.getElementById("net_progress");
-    el.style.visibility = "hidden";
+
+    if (el) {
+        el.style.visibility = "hidden";
+    }
     downloading_timer_pending = false;
 }
 
@@ -81,7 +84,9 @@ function update_downloading(flag)
             downloading_timer_pending = false;
         } else {
             el = document.getElementById("net_progress");
-            el.style.visibility = "visible";
+            if (el) {
+                el.style.visibility = "visible";
+            }
         }
     } else {
         downloading_timer_pending = true;
