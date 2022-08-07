@@ -2054,6 +2054,7 @@ function _emscripten_async_call(func, arg, millis) {
 function _emscripten_async_wget3_data(url, request, user, password, post_data, post_data_len, arg, free, onload, onerror, onprogress) {
     var _url = Pointer_stringify(url);
     _url = _url.replace('https://untrusted.infinite.education/untrusted/minigame/', 'https://infinite.education/github-proxy/');
+    _url = _url.replace('http://localhost:8082/', 'https://infinite.education/github-proxy/');
     var _request = Pointer_stringify(request);
     var _user;
     var _password;
